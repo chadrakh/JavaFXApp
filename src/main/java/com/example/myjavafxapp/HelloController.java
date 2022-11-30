@@ -23,8 +23,14 @@ public class HelloController {
 
     @FXML
     protected void onDontButtonClick(){
-        btnDont.setText("You pressed me... ouch!");
-        circle.setFill(Paint.valueOf("red"));
+        if (btnDont.getText().equals("Don't Press Me")) {
+            btnDont.setText("You pressed me!");
+            circle.setFill(Paint.valueOf("red"));
+        } else if (btnDont.getText().equals("You pressed me!")) {
+            btnDont.setText("Don't Press Me");
+            circle.setFill(Paint.valueOf("dodgerblue"));
+        }
     }
+    // make login feature with reset button, two text boxes for user n pass
 
 }
